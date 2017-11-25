@@ -1,3 +1,4 @@
+package nikita;
 
 public class HelloWorld {
 

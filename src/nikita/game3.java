@@ -2,7 +2,7 @@ package nikita;
 
 import java.util.Scanner;
 
-public class game2 {
+public class game3 {
 	public static void main(String[] args) {
 		Scanner console = new Scanner(System.in);
 		System.out.println("Введите характеристики 1-го персонажа.");
@@ -12,8 +12,10 @@ public class game2 {
 		double defense1 = console.nextDouble();
 		System.out.print("здоровье: ");
 		double health1 = console.nextDouble();
-		System.out.print("урон: ");
-		double damage1 = console.nextDouble();
+		System.out.print("урон макс.: ");
+		double damagemax1 = console.nextDouble();
+		System.out.print("урон мин.:");
+		double damagemin1= console.nextDouble();
 		System.out.println("Введите характеристики 2-го персонажа.");
 		System.out.print("атака: ");
 		double attack2 = console.nextDouble();
@@ -21,10 +23,14 @@ public class game2 {
 		double defense2 = console.nextDouble();
 		System.out.print("здоровье: ");
 		double health2 = console.nextDouble();
-		System.out.print("урон: ");
-		double damage2 = console.nextDouble();
+		System.out.print("урон макс.: ");
+		double damagemax2 = console.nextDouble();
+		System.out.print("урон мин. :");
+		double damagemin2 = console.nextDouble();
 		double totalDamage, percent;
 		System.out.println("1-ый персонаж атакует 2-ой персонаж");
+		double damage1, damage2;
+		damage1 = Math.rint(damagemin1 + Math.random() * ( damagemax1 - damagemin1 ));  
 		if(attack1 > defense2) {
 			percent = (attack1 - defense2) * 0.05;
 			if(percent > 4) {
@@ -48,6 +54,7 @@ public class game2 {
 			System.out.print(health2);
 			System.out.println(" очков");
 			System.out.println("2-ой персонаж даёт сдачи 1-му персонажу");
+			damage2 = Math.rint(damagemin2 + Math.random() * (damagemax2 - damagemin2  ));
 			if(attack2 > defense1) {
 				percent = (attack2 - defense1) * 0.05;
 				if(percent > 4) {
@@ -72,6 +79,7 @@ public class game2 {
 				System.out.println(" очков");
 				// 2-ой персонаж атакует 1-ый персонаж
 				System.out.println("2-ой персонаж атакует 1-го персонажа");
+				damage2 = Math.rint(damagemin2 + Math.random() * (damagemax2 - damagemin2  ));
 				if(attack2 > defense1) {
 					percent = (attack1 - defense2) * 0.05;
 					if(percent > 4) {
@@ -95,6 +103,7 @@ public class game2 {
 					System.out.print(health1);
 					System.out.println(" очков");
 					System.out.println("1-ый персонаж даёт сдачи  2-му персонажу");
+					damage1 = Math.rint(damagemin1 + Math.random() * ( damagemax1 - damagemin1 ));
 					if(attack1 > defense2) {
 						percent = (attack1 - defense2) * 0.05;
 						if(percent > 4) {
