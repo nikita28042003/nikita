@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class GameImitationWithObjects {
 	static void outUnit(Unit unit) {
-		System.out.print("�������������� ");
+		System.out.print("Информация о юните ");
 		System.out.print(unit.order);
 		System.out.println(" ���������:");
 		System.out.print("����� ");
