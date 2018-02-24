@@ -1,4 +1,4 @@
-package nikita.game_objects;
+package nikita.gameobjects;
 
 import java.util.Scanner;
 
